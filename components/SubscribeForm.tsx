@@ -41,8 +41,7 @@ export default function SubscribeForm() {
   if (status === "success") {
     return (
       <p className="success" role="status">
-        You&apos;re in. Issue 1 is <em>The IDE is not your vendor</em>. Friday
-        is next.
+        You&apos;re in. The next Friday letter is on its way.
       </p>
     );
   }
@@ -62,7 +61,7 @@ export default function SubscribeForm() {
           value={email}
           onChange={(e) => setEmail(e.target.value)}
           disabled={status === "submitting"}
-          placeholder="you@shop.com"
+          placeholder="you@company.com"
           aria-describedby={error ? "signup-error" : "signup-note"}
         />
         <button type="submit" disabled={status === "submitting"}>
@@ -75,7 +74,7 @@ export default function SubscribeForm() {
         </p>
       ) : (
         <p id="signup-note" className="note">
-          One email a week. Unsubscribe anytime. We will not sell the list.
+          One email a week. No pitch deck. No CRM sequence.
         </p>
       )}
     </form>
