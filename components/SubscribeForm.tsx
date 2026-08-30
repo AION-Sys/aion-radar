@@ -59,7 +59,11 @@ export default function SubscribeForm() {
           spellCheck={false}
           required
           value={email}
-          onChange={(e) => setEmail(e.target.value)}
+          onChange={(e) => {
+            setEmail(e.target.value);
+            if (error) setError("");
+            if (status === "error") setStatus("idle");
+          }}
           disabled={status === "submitting"}
           placeholder="you@company.com"
           aria-describedby={error ? "signup-error" : "signup-note"}
