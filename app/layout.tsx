@@ -17,13 +17,27 @@ const mono = IBM_Plex_Mono({
   display: "swap",
 });
 
+const title = "AION Radar — Friday letter for founders, developers, and creators";
+const description =
+  "AION Radar is a Friday letter of strategic input for founders, developers, and creators. Agents, tools, distribution, and the decisions that compound.";
+
 export const metadata: Metadata = {
-  title: "AION Radar — The IDE is not your vendor",
-  description:
-    "AION Radar. A Friday letter on agents, tools, and the missed-call leak. Agents draft. Humans send.",
+  title,
+  description,
   applicationName: "AION Radar",
   authors: [{ name: "AION", url: "https://x.com/aion_sys" }],
   robots: { index: true, follow: true },
+  openGraph: {
+    title: "AION Radar",
+    description,
+    type: "website",
+  },
+  twitter: {
+    card: "summary",
+    title: "AION Radar",
+    description,
+    creator: "@aion_sys",
+  },
 };
 
 export const viewport: Viewport = {
